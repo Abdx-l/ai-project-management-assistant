@@ -1,0 +1,20 @@
+POST http://127.0.0.1:8001/projects
+Content-Type: application/json
+
+{"name":"Bridge retrofit","budget":100000}
+
+###
+POST http://127.0.0.1:8001/projects/1/tasks
+Content-Type: application/json
+
+{"title":"Site inspection","cost":5000,"status":"done"}
+
+###
+POST http://127.0.0.1:8001/projects/1/notes
+Content-Type: application/json
+
+{"body":"Inspection completed; foundation reinforcement will cost approximately 20000."}
+
+###
+GET http://127.0.0.1:8001/ask?q=foundation%20cost
+
